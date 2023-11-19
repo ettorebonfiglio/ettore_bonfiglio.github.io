@@ -43,5 +43,45 @@
     <center>
         <img width="800px" height="550px" src="pasta-aglio-olio-peperoncino.jpg" alt="">
     </center>
+
+  <h2>Modulo di Feedback</h2>
+
+  <form action="/submit_form" method="post">
+    <!-- Campo dell'indirizzo email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br>
+
+    <!-- Campo della password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <br>
+
+    <!-- Spunta di acconsento al trattamento dei dati -->
+    <label>
+      <input type="checkbox" name="consent" required>
+      Acconsento al trattamento dei dati
+    </label>
+
+    <br>
+
+    <!-- Scelta multipla per il livello di gradimento -->
+    <label for="gradimento">Livello di Gradimento:</label>
+    <select id="gradimento" name="gradimento">
+      <option value="molto_soddisfatto">Molto Soddisfatto</option>
+      <option value="soddisfatto">Soddisfatto</option>
+      <option value="neutro">Neutro</option>
+      <option value="insoddisfatto">Insoddisfatto</option>
+      <option value="molto_insoddisfatto">Molto Insoddisfatto</option>
+    </select>
+
+    <br>
+
+    <!-- Tasto di invio -->
+    <button type="submit">Invia</button>
+  </form>
+
 </body>
 </html>
