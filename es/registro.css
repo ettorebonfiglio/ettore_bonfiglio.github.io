@@ -11,15 +11,20 @@ table{
 }
 
 th{
-    border: 1px;
+    text-align: center;
+    border: 0px ;
+    border-bottom: 1px;
     border-style: solid;
-    border-color: aqua;
+    border-color: rgb(0, 0, 0);
+}
+
+.left{
+    text-align: left;
 }
 
 .nome{
     font-weight: bolder;
     font-size: 16px;
-    
 }
 
 .mat{
@@ -40,5 +45,9 @@ th{
 }
 .neg{
     color: red;
+}
+
+tfoot{
+    font-weight: bolder ;
 }
 
