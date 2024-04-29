@@ -1,7 +1,7 @@
 body{
     align-items: center;
     align-content: center;
-    background-color: beige;
+    background-color: rgb(18, 175, 65);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -50,4 +50,3 @@ th{
 tfoot{
     font-weight: bolder ;
 }
-
