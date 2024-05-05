@@ -1,0 +1,35 @@
+#img1 {
+    width: 195px;
+    height: 450px;
+    background: url('sprite.jpg') 0 0;
+}
+  
+#img2 {
+   width: 230px;
+   height: 450px;
+   background: url('sprite.jpg') -200px 0;
+}
+
+#img3 {
+    width: 290px;
+    height: 450px;
+    background: url('sprite.jpg') -450px 0;
+}
+
+#img4 {
+    width: 320px;
+    height: 450px;
+    background: url('sprite.jpg') -740px 0;
+}
+
+#img5 {
+    width: 345px;
+    height: 450px;
+    background: url('sprite.jpg') -1070px 0;
+}
+
+#img6 {
+    width: 345px;
+    height: 450px;
+    background: url('sprite.jpg') -1430px 0;
+}
