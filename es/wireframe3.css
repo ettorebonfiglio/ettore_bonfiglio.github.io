@@ -1,0 +1,27 @@
+.box1{
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    float: left;
+    position: absolute;
+    top: 100px;
+}
+.box2{
+    background-color: blueviolet;
+    height: 300px;
+    width: 450px;
+    float: right;
+    margin-top: 100px;
+    top: 100px;
+}
+.box3{
+    background-color: brown;
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    left: 600px;
+    top: 550px;
+}
+.page{
+    background-color: gray;
+}
