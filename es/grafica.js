@@ -38,7 +38,8 @@ function lettura() {
         return ;
     }
     if(operazione=="/" && n2.value==0){
-        ris.innerHTML="LA DIVISIONE E' IMPOSSIBILE"
+        ris.innerHTML="LA DIVISIONE E' IMPOSSIBILE";
+        return ;
     }
 
     let risultato=0;
