@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="grafica.css">
+    <script src="grafica.js"></script>
+    <title>Gabbia Grafica</title>
+</head>
+<body>
+
+    <div class="title">NUMERO1 <input id="numero1"type="number"></div>
+
+    <div class="operazioni">
+        <a href="#" onclick="setOperazione('+','somma')"><div id="somma">+</div></a>
+        <a href="#" onclick="setOperazione('-', 'sottrazione')"><div id="sottrazione">-</div></a>
+        <a href="#" onclick="setOperazione('*', 'moltiplicazione')"><div id="moltiplicazione">*</div></a>
+        <a href="#" onclick="setOperazione('/', 'divisione')"><div id="divisione">/</div></a>
+    </div>
+
+    <a href="#" onclick="lettura()"><div class="tasto">ESEGUI</div></a>
+    <div class="risultato" id="ris">&nbsp;</div>
+
+</body>
+</html>
