@@ -4,10 +4,10 @@ function somma(p1, p2) {
     return Number(p1) + Number(p2);
 }
 function sottrazione(p1, p2) {
-  return Number(p1) - Number(p2);
+    return Number(p1) - Number(p2);
 }
 function moltiplicazione(p1, p2) {
-  return Number(p1) * Number(p2);
+    return Number(p1) * Number(p2);
 }
 function divisione(p1, p2) {
     if(p2!=0)
@@ -36,6 +36,9 @@ function lettura() {
     if(operazione==""){
         ris.innerHTML="SELEZIONA UN'OPERAZIONE";
         return ;
+    }
+    if(operazione=="/" && n2.value==0){
+        ris.innerHTML="LA DIVISIONE E' IMPOSSIBILE"
     }
 
     let risultato=0;
