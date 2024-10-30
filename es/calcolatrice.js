@@ -78,4 +78,6 @@ function setOperazione(op, id){
     operazione=op;
     scrittura();
     risultato=0;
+    n1=0;
+    n2=0;
 }
