@@ -77,4 +77,5 @@ function setOperazione(op, id){
     container.classList.add('scelta');
     operazione=op;
     scrittura();
+    risultato=0;
 }
