@@ -1,7 +1,5 @@
-h1 {
-    font: bolder;
-    text-align: center;
-    font-size: 20px;
-    color: black;
+body {
+    justify-content: center;
+    align-items: center;
     background-color: lightgrey;
 }
