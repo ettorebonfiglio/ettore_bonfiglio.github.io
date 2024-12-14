@@ -1,6 +1,3 @@
-let anagrafiche = [];
-let ultimoNum = 0;
-
 // salvo i valori in tabella
 function salva() {
     let flag = valida();
@@ -19,10 +16,18 @@ function salvaRiga() {
     let indirizzo = document.getElementById('indirizzo').value;
     let codiceFiscale = document.getElementById('codiceFiscale').value;
 
-    let vet = [nome, cognome, email, codiceFiscale, citta, indirizzo];
-    anagrafiche.push(vet);
+    let s = nome + "#" + cognome + "#" + email + "#" + codiceFiscale + "#" + citta + "#" + indirizzo;
+    let anagrafiche = localStorage.getItem('anagrafica');
+    
+    if (anagrafiche == null)
+        anagrafiche = "";
+    else 
+        anagrafiche += "_" ;
 
-    scriviTabella();
+    anagrafiche += s;
+    localStorage.setItem('anagrafica', anagrafiche);
+
+    location.href = "anagrafica2_1.html";
 }
 
 // cancella i valori nelle caselle di input
@@ -89,11 +94,15 @@ function valida() {
 
 function scriviTabella() {
     let tabella = document.getElementById('elenco').getElementsByTagName('tbody')[0];
-    
+    let anagrafiche = localStorage.getItem('anagrafica');
+    let righe = anagrafiche.split("_");
+
     //inserisco le righe nella tabella partendo da quelle nuove
-    for (let i = ultimoNum; i < anagrafiche.length; i++) {
+    for (let i = 0; i < righe.length; i++) {
+        // creo l'oggetto html riga
         let riga = tabella.insertRow();
 
+        // creo le colonne html
         let c_nome = riga.insertCell(0);
         let c_cognome = riga.insertCell(1);
         let c_email = riga.insertCell(2);
@@ -101,14 +110,23 @@ function scriviTabella() {
         let c_citta = riga.insertCell(4);
         let c_indirizzo = riga.insertCell(5);
 
-        c_nome.textContent = anagrafiche[i][0];
-        c_cognome.textContent = anagrafiche[i][1];
-        c_email.textContent = anagrafiche[i][2];
-        c_codiceFiscale.textContent = anagrafiche[i][3];
-        c_citta.textContent = anagrafiche[i][4];
-        c_indirizzo.textContent = anagrafiche[i][5];
+        let colonne = righe[i].split("#");
+
+        // scrivo i valori delle colonne
+        c_nome.textContent = colonne[0];
+        c_cognome.textContent = colonne[1];
+        c_email.textContent = colonne[2];
+        c_codiceFiscale.textContent = colonne[3];
+        c_citta.textContent = colonne[4];
+        c_indirizzo.textContent = colonne[5];
     }
-    
-    //salvo le righe utilizzate 
-    ultimoNum = anagrafiche.length;
+}
+
+// ritorno alla pagina iniziale
+function indietro() {
+    location.href = "anagrafica2.html";
+}
+
+function vaiTabella() {
+    location.href = "anagrafica2_1.html";
 }
