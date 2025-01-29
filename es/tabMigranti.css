@@ -11,12 +11,12 @@ h1 {
     margin-top: 40px;
 }
 
-#inputTesto {
+inputTesto {
     align-items: center;
     justify-content: center;
 }
 
-#mycanvas {
+mycanvas {
     align-items: center;
     margin-left: 5px;
 }
