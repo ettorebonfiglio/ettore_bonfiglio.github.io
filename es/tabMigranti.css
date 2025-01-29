@@ -17,5 +17,6 @@ h1 {
 }
 
 .mycanvas {
+    align-items: center;
     margin-left: 5px;
 }
