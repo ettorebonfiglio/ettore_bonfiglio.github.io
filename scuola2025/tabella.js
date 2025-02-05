@@ -15,24 +15,21 @@ function handleFileSelect(event) {
 
 function parseCSV(text) {
     const lines = text.split('\n');
-    const headers = lines[0].split(',');
-    const rows = lines.slice(1).map(line => line.split(','));
-
-    return { headers, rows };
+    return lines.map(line => {
+        const [x, y] = line.split(',').map(Number);
+        return { x, y };
+    });
 }
 
 function drawChart(data) {
     const ctx = document.getElementById('myChart').getContext('2d');
-    const labels = data.rows.map(row => row[0]);
-    const values = data.rows.map(row => parseFloat(row[1]));
 
     new Chart(ctx, {
-        type: 'bar',
+        type: 'scatter',
         data: {
-            labels: labels,
             datasets: [{
-                label: data.headers[1],
-                data: values,
+                label: 'Dati',
+                data: data,
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
@@ -40,6 +37,10 @@ function drawChart(data) {
         },
         options: {
             scales: {
+                x: {
+                    type: 'linear',
+                    position: 'bottom'
+                },
                 y: {
                     beginAtZero: true
                 }
