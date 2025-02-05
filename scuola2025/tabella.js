@@ -1,27 +1,54 @@
-document.getElementById('fileInput').addEventListener('change', function(e) {
+document.getElementById('csvFileInput').addEventListener('change', function(e) {
     const file = e.target.files[0];
     const reader = new FileReader();
-    reader.onload = function(event) {
-        const csvData = event.target.result;
-        const numbers = csvData.split(',').map(Number);
-        drawChart(numbers);
+    
+    reader.onload = function(e) {
+        const text = e.target.result;
+        const data = csvToArray(text);
+        createChart(data);
     };
+    
     reader.readAsText(file);
 });
 
-function drawChart(data) {
-    const canvas = document.getElementById('myCanvas');
-    const ctx = canvas.getContext('2d');
-    const maxVal = Math.max(...data);
-    const canvasHeight = canvas.height;
-    const canvasWidth = canvas.width;
-    const barWidth = canvasWidth / data.length;
-
-    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+function csvToArray(str, delimiter = ',') {
+    const rows = str.split('\n');
     
-    data.forEach((value, index) => {
-        const barHeight = (value / maxVal) * canvasHeight;
-        ctx.fillStyle = 'blue';
-        ctx.fillRect(index * barWidth, canvasHeight - barHeight, barWidth, barHeight);
+    const arr = rows.map(function(row) {
+        const values = row.split(delimiter);
+        return {
+            label: values[0],
+            value1: parseFloat(values[1]),
+        };
+    });
+    return arr;
+}
+
+function createChart(data) {
+    const labels = data.map(item => item.label);
+    const values1 = data.map(item => item.value1);
+    
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Numero immagrati per anno',
+                    data: values1,
+                    backgroundColor: 'cyan',
+                    borderColor: 'blue',
+                    borderWidth: 2
+                },
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
     });
 }

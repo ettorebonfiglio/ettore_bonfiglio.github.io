@@ -1,46 +1,15 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grafico da CSV</title>
-    <style>
-        canvas {
-            border: 1px solid black;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafico CSV</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <input type="file" id="fileInput">
-    <canvas id="myCanvas" width="600" height="400"></canvas>
-
-    <script>
-        document.getElementById('fileInput').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                const csvData = event.target.result;
-                const numbers = csvData.split(',').map(Number);
-                drawChart(numbers);
-            };
-            reader.readAsText(file);
-        });
-
-        function drawChart(data) {
-            const canvas = document.getElementById('myCanvas');
-            const ctx = canvas.getContext('2d');
-            const maxVal = Math.max(...data);
-            const canvasHeight = canvas.height;
-            const canvasWidth = canvas.width;
-            const barWidth = canvasWidth / data.length;
-
-            ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-            
-            data.forEach((value, index) => {
-                const barHeight = (value / maxVal) * canvasHeight;
-                ctx.fillStyle = 'blue';
-                ctx.fillRect(index * barWidth, canvasHeight - barHeight, barWidth, barHeight);
-            });
-        }
-    </script>
+    <h1>Grafico CSV da tabella dati immigrazioni</h1>
+    <input type="file" id="csvFileInput" accept=".csv">
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script src="grafico.js"></script>
 </body>
 </html>
