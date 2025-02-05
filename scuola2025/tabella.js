@@ -1,60 +1,27 @@
-document.getElementById('csvFileInput').addEventListener('change', handleFileSelect, false);
-
-function handleFileSelect(event) {
-    const file = event.target.files[0];
+document.getElementById('fileInput').addEventListener('change', function(e) {
+    const file = e.target.files[0];
     const reader = new FileReader();
-
-    reader.onload = function(e) {
-        const text = e.target.result;
-        console.log('File CSV caricato:', text); // Messaggio di debug
-        const data = parseCSV(text);
-        console.log('Dati CSV analizzati:', data); // Messaggio di debug
-        drawChart(data);
+    reader.onload = function(event) {
+        const csvData = event.target.result;
+        const numbers = csvData.split(',').map(Number);
+        drawChart(numbers);
     };
-
-    reader.onerror = function(e) {
-        console.error('Errore nella lettura del file:', e); // Messaggio di errore
-    };
-
-    if (file) {
-        reader.readAsText(file);
-    } else {
-        console.error('Nessun file selezionato'); // Messaggio di errore
-    }
-}
-
-function parseCSV(text) {
-    const lines = text.split('\n');
-    return lines.map(line => {
-        const [x, y] = line.split(',').map(Number);
-        return { x, y };
-    });
-}
+    reader.readAsText(file);
+});
 
 function drawChart(data) {
-    const ctx = document.getElementById('myChart').getContext('2d');
+    const canvas = document.getElementById('myCanvas');
+    const ctx = canvas.getContext('2d');
+    const maxVal = Math.max(...data);
+    const canvasHeight = canvas.height;
+    const canvasWidth = canvas.width;
+    const barWidth = canvasWidth / data.length;
 
-    new Chart(ctx) {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label = 'Dati',
-                data: data,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
-            }]
-        }
-        options: {
-            scales: {
-                x: {
-                    type: 'linear',
-                    position = 'bottom'
-                }
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    }
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    
+    data.forEach((value, index) => {
+        const barHeight = (value / maxVal) * canvasHeight;
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(index * barWidth, canvasHeight - barHeight, barWidth, barHeight);
+    });
 }
