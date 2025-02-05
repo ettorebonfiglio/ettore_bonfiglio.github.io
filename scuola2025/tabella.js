@@ -34,25 +34,27 @@ function parseCSV(text) {
 function drawChart(data) {
     const ctx = document.getElementById('myChart').getContext('2d');
 
-    new Chart(ctx, {
+    new Chart(ctx) {
         type: 'scatter',
         data: {
             datasets: [{
-                label: 'Dati',
+                label = 'Dati',
                 data: data,
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 1
             }]
-        },
+        }
         options: {
             scales: {
                 x: {
                     type: 'linear',
-                    position: 'bottom'
-                },
+                    position = 'bottom'
+                }
                 y: {
                     beginAtZero: true
                 }
             }
-        
+        }
+    }
+}
