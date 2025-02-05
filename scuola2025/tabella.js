@@ -43,8 +43,8 @@ function drawChart(data) {
             datasets: [{
                 label: 'Dati',
                 data: data,
-                backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                borderColor: 'rgba(75, 192, 192, 1)',
+                backgroundColor: 'rgba(137, 192, 75, 0.2)',
+                borderColor: 'rgb(98, 192, 75)',
                 borderWidth: 1
             }]
         },
