@@ -42,21 +42,21 @@
       "marca": "Dell",
       "modello": "XPS 13",
       "descrizione": "Notebook 13\" con Intel i7, 16GB RAM, 512GB SSD.",
-      "immagine": "https://via.placeholder.com/200x150?text=Dell+XPS+13",
+      "immagine": "dell13.jpg",
       "prezzo": 1299.00
     },
     {
       "marca": "HP",
       "modello": "Envy 15",
       "descrizione": "Laptop ad alte prestazioni con NVIDIA RTX 3060.",
-      "immagine": "https://via.placeholder.com/200x150?text=HP+Envy+15",
+      "immagine": "hp.jpg",
       "prezzo": 1099.00
     },
     {
       "marca": "LG",
       "modello": "OLED C2",
       "descrizione": "TV OLED 55\" 4K con webOS e Dolby Vision.",
-      "immagine": "https://via.placeholder.com/200x150?text=LG+OLED+C2",
+      "immagine": "lg.jpg",
       "prezzo": 1499.00
     }
   ]
