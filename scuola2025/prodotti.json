@@ -21,21 +21,21 @@
       "marca": "Apple",
       "modello": "iPhone 15",
       "descrizione": "iPhone 15 con chip A16 Bionic, fotocamera migliorata, 128GB.",
-      "immagine": "https://via.placeholder.com/200x150?text=iPhone+15",
+      "immagine": "iphone15.jpg",
       "prezzo": 999.00
     },
     {
       "marca": "Xiaomi",
       "modello": "Redmi Note 12",
       "descrizione": "Ottimo smartphone di fascia media con 256GB e schermo 120Hz.",
-      "immagine": "https://via.placeholder.com/200x150?text=Redmi+Note+12",
+      "immagine": "redmi12.jpg",
       "prezzo": 299.99
     },
     {
       "marca": "Sony",
       "modello": "WH-1000XM5",
       "descrizione": "Cuffie wireless con cancellazione attiva del rumore.",
-      "immagine": "https://via.placeholder.com/200x150?text=Sony+XM5",
+      "immagine": "sonyCuffie.jpg",
       "prezzo": 379.00
     },
     {
