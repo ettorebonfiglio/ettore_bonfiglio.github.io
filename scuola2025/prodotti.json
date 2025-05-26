@@ -1,0 +1,63 @@
+{
+  "user": {
+    "nome": "Mario",
+    "cognome": "Rossi",
+    "user": "mrossi",
+    "password": "c3VwZXJzZWNyZXRwYXNz", 
+    "indirizzo": "Via Roma 10",
+    "città": "Milano",
+    "cap": "20100",
+    "telefono": "1234567890"
+  },
+  "prodotti": [
+    {
+      "marca": "Samsung",
+      "modello": "Galaxy S23",
+      "descrizione": "Smartphone con display AMOLED 6.1'', 128GB memoria interna.",
+      "immagine": "lilac1_2.jpg",
+      "prezzo": 799.99
+    },
+    {
+      "marca": "Apple",
+      "modello": "iPhone 15",
+      "descrizione": "iPhone 15 con chip A16 Bionic, fotocamera migliorata, 128GB.",
+      "immagine": "https://via.placeholder.com/200x150?text=iPhone+15",
+      "prezzo": 999.00
+    },
+    {
+      "marca": "Xiaomi",
+      "modello": "Redmi Note 12",
+      "descrizione": "Ottimo smartphone di fascia media con 256GB e schermo 120Hz.",
+      "immagine": "https://via.placeholder.com/200x150?text=Redmi+Note+12",
+      "prezzo": 299.99
+    },
+    {
+      "marca": "Sony",
+      "modello": "WH-1000XM5",
+      "descrizione": "Cuffie wireless con cancellazione attiva del rumore.",
+      "immagine": "https://via.placeholder.com/200x150?text=Sony+XM5",
+      "prezzo": 379.00
+    },
+    {
+      "marca": "Dell",
+      "modello": "XPS 13",
+      "descrizione": "Notebook 13\" con Intel i7, 16GB RAM, 512GB SSD.",
+      "immagine": "https://via.placeholder.com/200x150?text=Dell+XPS+13",
+      "prezzo": 1299.00
+    },
+    {
+      "marca": "HP",
+      "modello": "Envy 15",
+      "descrizione": "Laptop ad alte prestazioni con NVIDIA RTX 3060.",
+      "immagine": "https://via.placeholder.com/200x150?text=HP+Envy+15",
+      "prezzo": 1099.00
+    },
+    {
+      "marca": "LG",
+      "modello": "OLED C2",
+      "descrizione": "TV OLED 55\" 4K con webOS e Dolby Vision.",
+      "immagine": "https://via.placeholder.com/200x150?text=LG+OLED+C2",
+      "prezzo": 1499.00
+    }
+  ]
+}
