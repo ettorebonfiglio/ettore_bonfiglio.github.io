@@ -1,63 +1,61 @@
 {
-  "user": {
-    "nome": "Mario",
-    "cognome": "Rossi",
-    "user": "mrossi",
-    "password": "c3VwZXJzZWNyZXRwYXNz", 
-    "indirizzo": "Via Roma 10",
-    "città": "Milano",
-    "cap": "20100",
-    "telefono": "1234567890"
-  },
-  "prodotti": [
-    {
-      "marca": "xxx",
-      "modello": "Galaxy S23",
-      "descrizione": "Smartphone con display AMOLED 6.1'', 128GB memoria interna.",
-      "immagine": "samsung.jpg",
-      "prezzo": 799.99
-    },
-    {
-      "marca": "Apple",
-      "modello": "iPhone 15",
-      "descrizione": "iPhone 15 con chip A16 Bionic, fotocamera migliorata, 128GB.",
-      "immagine": "iphone15.jpg",
-      "prezzo": 999.00
-    },
-    {
-      "marca": "Xiaomi",
-      "modello": "Redmi Note 12",
-      "descrizione": "Ottimo smartphone di fascia media con 256GB e schermo 120Hz.",
-      "immagine": "redmi12.jpg",
-      "prezzo": 299.99
-    },
-    {
-      "marca": "Sony",
-      "modello": "WH-1000XM5",
-      "descrizione": "Cuffie wireless con cancellazione attiva del rumore.",
-      "immagine": "sonyCuffie.jpg",
-      "prezzo": 379.00
-    },
-    {
-      "marca": "Dell",
-      "modello": "XPS 13",
-      "descrizione": "Notebook 13\" con Intel i7, 16GB RAM, 512GB SSD.",
-      "immagine": "dell13.jpg",
-      "prezzo": 1299.00
-    },
-    {
-      "marca": "HP",
-      "modello": "Envy 15",
-      "descrizione": "Laptop ad alte prestazioni con NVIDIA RTX 3060.",
-      "immagine": "hp.jpg",
-      "prezzo": 1099.00
-    },
-    {
-      "marca": "LG",
-      "modello": "OLED C2",
-      "descrizione": "TV OLED 55\" 4K con webOS e Dolby Vision.",
-      "immagine": "lg.jpg",
-      "prezzo": 1499.00
-    }
-  ]
-}
+    "prodotti": [
+      {
+        "marca": "NZXT",
+        "modello": "CASE PC H510 FLOW",
+        "descrizione": "Case PC fisso, ventole incluse",
+        "immagine": "casePC.webp",
+        "prezzo": 79.99
+      },
+      {
+        "marca": "RYZEN",
+        "modello": "CPU amd 8600G 5",
+        "descrizione": "Cpu ryzen 8600G 5, 6 core, 12 thread, 4.2 GHz",
+        "immagine": "cpuPC.jpg",
+        "prezzo": 169.99
+      },
+      {
+        "marca": "MSI",
+        "modello": "Motherboard B650",
+        "descrizione": "Motherboard MSI B650, AM5, DDR5, PCIe 4.0, ATX",
+        "immagine": "mbPC.jpg",
+        "prezzo": 199.99
+      },
+      {
+        "marca": "GIGABYTE",
+        "modello": "NVIDIA 4060 RTX",
+        "descrizione": "Scheda video GIGABYTE NVIDIA 4060 RTX, 8GB GDDR6, Ray Tracing",
+        "immagine": "gcPC.jpg",
+        "prezzo": 730.00
+      },
+      {
+        "marca": "ASUS",
+        "modello": "ROG strix 550g",
+        "descrizione": "Alimentatore ASUS ROG Strix 550G, 80 Plus Gold, 550W, modulare",
+        "immagine": "alimentatorePC.jpg",
+        "prezzo": 129.99
+      },
+      {
+        "marca": "CRUCIAL",
+        "modello": "P310 SSD 1TB",
+        "descrizione": "Scheda ssd 1tb Crucial P310, NVMe, M.2 2280, 3500MB/s",
+        "immagine": "ssdPC.jpg",
+        "prezzo": 89.99
+      },
+      {
+        "marca": "GIGASTONE",
+        "modello": "RAM 16GB DDR5",
+        "descrizione": "Memoria RAM GIGASTONE 16GB DDR5, 4800MHz, CL40, DIMM",
+        "immagine": "ramPC.jpg",
+        "prezzo": 89.99
+      },
+      {
+        "marca": "GAWFOLK",
+        "modello": "Monitor 27\" 4K",
+        "descrizione": "Monitor Gawfolk 27\" 4K, IPS, 144Hz, FreeSync, HDR10",
+        "immagine": "monitorPC.jpg",
+        "prezzo": 200.00
+      }
+    ]
+  }
+  
